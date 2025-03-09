@@ -1,6 +1,6 @@
 // client/src/components/Dashboard.jsx
 import React, { useState } from 'react';
-import FileManager from "../components/filemanager";
+import FileManager from "./filemanager";
 
 const Dashboard = () => {
   const [projectDetails, setProjectDetails] = useState({

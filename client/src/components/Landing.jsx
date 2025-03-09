@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Logo from "../assets/logo.png";
 import bgImage from"../assets/service.jpg";
 import tin from"../assets/main.png";
+import resi from"../assets/residential.jpg";
+import commer from"../assets/Commercial.jpg";
+import restore from"../assets/restore.jpg";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -88,26 +91,38 @@ const Main = () => {
       </div>
     </section>
 
-      <section id="projects" className=" py-20 px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Recent Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Commercial Projects", description: "Completed in 2024, a state-of-the-art workspace." },
-              { title: "Residential Project", description: "Exquisite design and premium finishes." },
-              { title: "Restored Project", description: "A vibrant retail destination for the community." }
-            ].map((project, index) => (
-              <div key={index} className="bg-black border border-gold rounded-lg overflow-hidden hover:bg-gold hover:text-black transition-all duration-300">
-                <div className="h-48 bg-gray-900"></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-400">{project.description}</p>
-                </div>
-              </div>
-            ))}
+    <section id="projects" className="py-20 px-8">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-4xl font-bold text-center mb-12 text-white">Recent Projects</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        { 
+          title: "Commercial Projects", 
+          description: "Completed in 2024, a state-of-the-art workspace.",
+          image:{resi}
+        },
+        { 
+          title: "Residential Project", 
+          description: "Exquisite design and premium finishes.",
+          image: {commer}
+        },
+        { 
+          title: "Restored Project", 
+          description: "A vibrant retail destination for the community.",
+          image:{restore} 
+        }
+      ].map((project, index) => (
+        <div key={index} className="bg-black border border-gold rounded-lg overflow-hidden hover:bg-gold hover:text-black transition-all duration-300">
+          <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <p className="text-gray-400">{project.description}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <footer id="contact" className="bg-black text-white py-12 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">

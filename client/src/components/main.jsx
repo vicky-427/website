@@ -289,11 +289,11 @@ const ConstructionCostCalculator = () => {
       padding: '20px',
       backgroundColor: '#000000'
     }}>
-      <div className="logo-container" style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <img src="/api/placeholder/200/100" alt="Your Construction Company Logo" style={{ maxWidth: '200px', height: 'auto' }} />
+     
+      <div className="h-40 w-40 rounded flex items-center justify-center mx-auto ">
+                <img src={Logo} alt="logo"  className="h-full w-full object-contain " />
       </div>
-      
-      <h1 style={{ color: 'goldenrod', textAlign: 'center', marginBottom: '30px' }}>Construction Cost Calculator</h1>
+       <h1 style={{ color: 'goldenrod', textAlign: 'center', marginBottom: '90px', fontSize:"30px",  fontStyle:"initial"}}>Construction Cost Calculator</h1>
       
       <div className="calculator-container" style={{
         backgroundColor: 'goldenrod',
@@ -321,7 +321,7 @@ const ConstructionCostCalculator = () => {
               <option value="residential">Residential Building</option>
               <option value="commercial">Commercial Building</option>
               <option value="industrial">Industrial Building</option>
-              <option value="renovation">Renovation</option>
+              <option value="renovation">Restore</option>
             </select>
           </div>
           
